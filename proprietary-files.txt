@@ -709,10 +709,6 @@ vendor/lib/libscveTextReco.so
 vendor/lib/libscveTextReco_stub.so
 vendor/lib/libscveTextRecoPostProcessing.so
 vendor/lib/libsd_sdk_display.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libsdm-disp-apis.so
-vendor/lib/libsdmextension.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libSecureUILib.so

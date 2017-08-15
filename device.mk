@@ -79,11 +79,16 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
 
+# Browser
+PRODUCT_PACKAGES += \
+    Gello
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8953 \
     libbson \
-    libshim_camera
+    libshim_camera \
+    Snap
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8953_mot_potter_camera.xml:system/etc/camera/msm8953_mot_potter_camera.xml \
@@ -100,6 +105,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+
+# CMActions
+PRODUCT_PACKAGES += \
+    CMActions
 
 # Display
 PRODUCT_PACKAGES += \

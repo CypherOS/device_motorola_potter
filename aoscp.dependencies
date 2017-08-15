@@ -12,6 +12,18 @@
     "branch":      "nougat-mr2"
   },
   {
+    "repository":  "device_qcom_common",
+    "target_path": "device/qcom/common",
+    "remote":      "aoscp",
+    "branch":      "nougat-mr2"
+  },
+  {
+    "repository":  "android_packages_resources_devicesettings",
+    "target_path": "ackages/resources/devicesettings",
+    "remote":      "los",
+    "branch":      "cm-14.1"
+  },
+  {
     "repository":  "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
     "remote":      "aoscp",

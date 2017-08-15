@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # for specific
 $(call inherit-product, vendor/motorola/potter/potter-vendor.mk)
 
-# Inherit some common aoscp stuff.
+# Inherit some common AOSCP stuff.
 $(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
 # Boot animation
