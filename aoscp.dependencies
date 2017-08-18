@@ -12,6 +12,12 @@
     "branch":      "nougat-mr2"
   },
   {
+    "repository":  "device_qcom_common",
+    "target_path": "device/qcom/common",
+    "remote":      "aoscp",
+    "branch":      "nougat-mr2"
+  },
+  {
     "repository":  "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
     "remote":      "aoscp",
