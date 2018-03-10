@@ -38,28 +38,24 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>6</item>
-	<item>12</item>
-        <item>25</item>
+        <item>2</item>
+        <item>10</item>
         <item>50</item>
-        <item>80</item>
-        <item>120</item>
-        <item>175</item>
-        <item>250</item>
-        <item>350</item>
+        <item>90</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
         <item>500</item>
-        <item>750</item>
+        <item>800</item>
         <item>1000</item>
-        <item>1400</item>
+        <item>1300</item>
         <item>2000</item>
-        <item>3500</item>
-        <item>6000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>8000</item>
         <item>10000</item>
-        <item>15000</item>
-        <item>20000</item>
-        <item>30000</item>
-        <item>65535</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -68,29 +64,25 @@
          This must be overridden in platform specific overlays -->
     
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>7</item>
-        <item>10</item>
-	<item>13</item>
-        <item>16</item>
-        <item>22</item>
-	<item>28</item>
-        <item>34</item>
-        <item>43</item>
-        <item>52</item>
-        <item>61</item>
-        <item>72</item>
-        <item>83</item>
-        <item>94</item>
-        <item>105</item>
-        <item>117</item>
-        <item>129</item>
-        <item>141</item>
+        <item>3</item>
+        <item>11</item>
+        <item>40</item>
+        <item>62</item>
+        <item>74</item>
+        <item>85</item>
+        <item>102</item>
+        <item>102</item>
+        <item>102</item>
+        <item>102</item>
+        <item>128</item>
         <item>153</item>
-        <item>166</item>
+        <item>170</item>
         <item>179</item>
-        <item>192</item>
-        <item>205</item>
-        <item>218</item>
+        <item>238</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
+        <item>256</item>
     </integer-array>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
@@ -220,7 +212,7 @@
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">false</bool>
+    <bool name="config_showNavigationBar">true</bool>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
           May be less than the minimum allowed brightness setting
@@ -296,21 +288,66 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
+    <!-- Paths to the libraries that contain device specific key handlers -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>
+
+    <!-- Names of the key handler classes -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <!-- <bool name="config_intrusiveBatteryLed">true</bool> -->
+
+    <!-- Default value for proximity check on screen wake
+         NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
+
+    <!-- Hardware keys present on the device, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home
+             2 - Back
+             4 - Menu
+             8 - Assistant (search)
+            16 - App switch
+            32 - Camera
+            64 - Volume rocker
+         For example, a device with Home, Back and Menu keys would set this
+         config to 7. -->
+    <integer name="config_deviceHardwareKeys">64</integer>
+
+    <!-- Support in Surfaceflinger for blur layers.
+         NOTE: This requires additional hardware-specific code. -->
+    <!--<bool name="config_uiBlurEnabled">true</bool>-->
+
+    <!-- Default files to pin via Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/arm64/boot-framework.vdex"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/oat/arm64/services.vdex"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot.vdex"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
+    </string-array>
+
    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
    in hardware. -->
    <bool name="config_setColorTransformAccelerated">true</bool>
+   
+   <!-- If this is true, device supports Sustained Performance Mode. -->
+   <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
-   <!-- Default files to pin via Pinner Service -->
-   <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-       <item>"/system/framework/arm64/boot-framework.oat"</item>
-       <item>"/system/framework/arm64/boot-framework.vdex"</item>
-       <item>"/system/framework/oat/arm64/services.odex"</item>
-       <item>"/system/framework/oat/arm64/services.vdex"</item>
-       <item>"/system/framework/arm64/boot.oat"</item>
-       <item>"/system/framework/arm64/boot.vdex"</item>
-       <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-       <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
-   </string-array>
+    <!-- enable doze powersaving mode -->
+    <bool name="config_enableAutoPowerModes">true</bool>
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
+    <bool name="config_displayBlanksAfterDoze">true</bool>
 
    <!-- Should the pinner service pin the Camera application? -->
    <bool name="config_pinnerCameraApp">true</bool>
