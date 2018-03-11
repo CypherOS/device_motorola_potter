@@ -354,6 +354,10 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libqsap_shim
+	
+# for off charging mode
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 # Thermal
 PRODUCT_COPY_FILES += \
