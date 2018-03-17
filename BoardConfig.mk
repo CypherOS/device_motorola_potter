@@ -148,6 +148,12 @@ TARGET_ONE_FINGER_SWIPE_DOWN_NODE := "/sys/android_touch/gesture_swipe_down"
 TARGET_ONE_FINGER_SWIPE_LEFT_NODE := "/sys/android_touch/gesture_swipe_left"
 TARGET_ONE_FINGER_SWIPE_RIGHT_NODE := "/sys/android_touch/gesture_swipe_right"
 
+# Fingerprint Gestures
+TARGET_FINGERPRINT_DOUBLE_TAP_NODE := "/sys/homebutton/key_dbltap"
+TARGET_FINGERPRINT_LONG_PRESS_NODE := "/sys/homebutton/key_hold"
+TARGET_FINGERPRINT_SWIPE_LEFT_NODE := "/sys/homebutton/key_left"
+TARGET_FINGERPRINT_SWIPE_RIGHT_NODE := "/sys/homebutton/key_right"
+
 # CNE / DPM
 BOARD_USES_QCNE := true
 

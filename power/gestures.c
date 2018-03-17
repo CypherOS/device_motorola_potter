@@ -52,4 +52,24 @@ void set_device_specific_feature(feature_t feature, int state)
         sysfs_write(ONE_FINGER_SWIPE_RIGHT_NODE, tmp_str);
         return;
     }
+	
+	if (feature == POWER_FEATURE_FINGERPRINT_DOUBLE_TAP) {
+        sysfs_write(FINGERPRINT_DOUBLE_TAP_NODE, tmp_str);
+        return;
+    }
+	
+	if (feature == POWER_FEATURE_FINGERPRINT_LONG_PRESS) {
+        sysfs_write(FINGERPRINT_LONG_PRESS_NODE, tmp_str);
+        return;
+    }
+	
+	if (feature == POWER_FEATURE_FINGERPRINT_SWIPE_LEFT) {
+        sysfs_write(FINGERPRINT_SWIPE_LEFT_NODE, tmp_str);
+        return;
+    }
+	
+	if (feature == POWER_FEATURE_FINGERPRINT_SWIPE_RIGHT) {
+        sysfs_write(FINGERPRINT_SWIPE_RIGHT_NODE, tmp_str);
+        return;
+    }
 }

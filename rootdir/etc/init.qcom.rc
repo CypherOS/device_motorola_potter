@@ -206,23 +206,6 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # FPC home button permissions
-    chown system system /sys/homebutton/enable
-    chown system system /sys/homebutton/enable_off
-    chown system system /sys/homebutton/haptic
-    chown system system /sys/homebutton/haptic_off
-    chown system system /sys/homebutton/proximity_check_off 
-    chown system system /sys/homebutton/key
-    chown system system /sys/homebutton/key_hold
-    chown system system /sys/homebutton/key_dbltap
-    chown system system /sys/homebutton/key_left
-    chown system system /sys/homebutton/key_right
-    chown system system /sys/homebutton/key_screenoff
-    chown system system /sys/homebutton/key_screenoff_hold
-    chown system system /sys/homebutton/key_screenoff_dbltap
-    chown system system /sys/homebutton/key_screenoff_left
-    chown system system /sys/homebutton/key_screenoff_right
-
     # Display
     chown system graphics /sys/class/graphics/fb1/hpd
     chmod 0664 /sys/class/graphics/fb1/hpd
@@ -884,6 +867,42 @@ on property:sys.boot_completed=1
     chown root system /sys/android_touch/gesture_swipe_up
     chmod 0666 /sys/android_touch/gesture_swipe_up
     write /sys/android_touch/gesture_swipe_up 1
+	
+	# Fingerprint Gestures
+    chown root system /sys/homebutton/key
+	chown root system /sys/homebutton/key_screenoff
+	chmod 0666 /sys/homebutton/key
+	chmod 0666 /sys/homebutton/key_screenoff
+    write /sys/homebutton/key 1
+	write /sys/homebutton/key_screenoff 1
+	
+    chown root system /sys/homebutton/key_hold
+	chown root system /sys/homebutton/key_screenoff_hold
+	chmod 0666 /sys/homebutton/key_hold
+	chmod 0666 /sys/homebutton/key_screenoff_hold
+    write /sys/homebutton/key_hold 1
+	write /sys/homebutton/key_screenoff_hold 1
+	
+    chown root system /sys/homebutton/key_dbltap
+	chown root system /sys/homebutton/key_screenoff_dbltap
+	chmod 0666 /sys/homebutton/key_dbltap
+	chmod 0666 /sys/homebutton/key_screenoff_dbltap
+    write /sys/homebutton/key_dbltap 1
+	write /sys/homebutton/key_screenoff_dbltap 1
+	
+    chown root system /sys/homebutton/key_left
+	chown root system /sys/homebutton/key_screenoff_left
+	chmod 0666 /sys/homebutton/key_left
+	chmod 0666 /sys/homebutton/key_screenoff_left
+    write /sys/homebutton/key_left 1
+	write /sys/homebutton/key_screenoff_left 1
+	
+    chown root system /sys/homebutton/key_right
+	chown root system /sys/homebutton/key_screenoff_right
+	chmod 0666 /sys/homebutton/key_right
+	chmod 0666 /sys/homebutton/key_screenoff_right
+    write /sys/homebutton/key_right 1
+	write /sys/homebutton/key_screenoff_right 1
 
     # init task load, restrict wakeups to preferred cluster
     write /proc/sys/kernel/sched_init_task_load 15
