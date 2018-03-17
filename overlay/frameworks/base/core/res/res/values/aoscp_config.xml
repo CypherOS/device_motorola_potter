@@ -27,6 +27,15 @@
     <integer name="config_oneFingerSwipeRightKeyCode">622</integer>
 
     <integer name="config_oneFingerSwipeUpKeyCode">625</integer>
+	
+	<!-- Key codes of fingerprint gestures. If the gesture is not supported set it to 0. -->
+    <integer name="config_fingerprintDoubleTapKeyCode">616</integer>
+
+    <integer name="config_fingerprintLongPressKeyCode">617</integer>
+
+    <integer name="config_fingerprintSwipeLeftKeyCode">621</integer>
+
+    <integer name="config_fingerprintSwipeRightKeyCode">620</integer>
 
     <!-- Whether to intercept inputs on screen off. -->
     <bool name="config_enableKeyHandler">true</bool>
