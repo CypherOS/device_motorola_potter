@@ -208,15 +208,22 @@ on boot
 
     # FPC home button permissions
     chown system system /sys/homebutton/enable
+	write /sys/homebutton/enable 1
     chown system system /sys/homebutton/enable_off
     chown system system /sys/homebutton/haptic
+	write /sys/homebutton/haptic 1
     chown system system /sys/homebutton/haptic_off
     chown system system /sys/homebutton/proximity_check_off 
     chown system system /sys/homebutton/key
+	write /sys/homebutton/key 1
     chown system system /sys/homebutton/key_hold
+	write /sys/homebutton/key_hold 1
     chown system system /sys/homebutton/key_dbltap
+	write /sys/homebutton/key_dbltap 1
     chown system system /sys/homebutton/key_left
+	write /sys/homebutton/key_left 1
     chown system system /sys/homebutton/key_right
+	write /sys/homebutton/key_right 1
     chown system system /sys/homebutton/key_screenoff
     chown system system /sys/homebutton/key_screenoff_hold
     chown system system /sys/homebutton/key_screenoff_dbltap
