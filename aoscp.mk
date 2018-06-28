@@ -17,15 +17,15 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/moto/potter/full_potter.mk)
 
-# Inherit some common DU stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+# Inherit some common aoscp stuff.
+$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
 # TWRP theme
 TW_THEME := portrait_hdpi
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
-PRODUCT_NAME := du_potter
+PRODUCT_NAME := aoscp_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 

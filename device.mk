@@ -125,10 +125,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/vendor/etc/xtwifi.conf \
     $(LOCAL_PATH)/gps/etc/cacert_location.pem:system/vendor/etc/cacert_location.pem
 
-# MotoActions
-PRODUCT_PACKAGES += \
-    MotoActions
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8953 \

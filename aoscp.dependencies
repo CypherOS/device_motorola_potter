@@ -1,0 +1,12 @@
+[
+ {
+    "repository":  "kernel_motorola_msm8953",
+    "target_path": "kernel/motorola/msm8953",
+    "remote":      "aoscp"
+ },
+ {
+    "repository":  "proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "remote":      "aoscp"
+ }
+]
