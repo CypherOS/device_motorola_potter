@@ -16,7 +16,7 @@
 
 -include vendor/motorola/potter/BoardConfigVendor.mk
 
-DEVICE_PATH := device/moto/potter
+DEVICE_PATH := device/motorola/potter
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -90,7 +90,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := potter_defconfig
-TARGET_KERNEL_SOURCE := kernel/moto/msm8953
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 7.0.2
