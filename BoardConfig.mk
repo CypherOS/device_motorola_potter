@@ -240,7 +240,14 @@ MOT_SENSOR_HUB_FEATURE_LIFT := true
 MOT_SENSOR_HUB_FEATURE_PEDO := true
 MOT_SENSOR_HUB_FEATURE_LA := true
 MOT_SENSOR_HUB_FEATURE_GR := true
+
+# Gestures
+TARGET_POWER_GESTURE_FILE := $(DEVICE_PATH)/power/gestures.c
 TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
+TARGET_ONE_FINGER_SWIPE_UP_NODE := "/sys/android_touch/gesture_swipe_up"
+TARGET_ONE_FINGER_SWIPE_DOWN_NODE := "/sys/android_touch/gesture_swipe_down"
+TARGET_ONE_FINGER_SWIPE_LEFT_NODE := "/sys/android_touch/gesture_swipe_left"
+TARGET_ONE_FINGER_SWIPE_RIGHT_NODE := "/sys/android_touch/gesture_swipe_right"
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
