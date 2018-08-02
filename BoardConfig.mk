@@ -133,8 +133,12 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
-# DT2W
+# Gestures
 TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
+TARGET_ONE_FINGER_SWIPE_UP_NODE := "/sys/android_touch/gesture_swipe_up"
+TARGET_ONE_FINGER_SWIPE_DOWN_NODE := "/sys/android_touch/gesture_swipe_down"
+TARGET_ONE_FINGER_SWIPE_LEFT_NODE := "/sys/android_touch/gesture_swipe_left"
+TARGET_ONE_FINGER_SWIPE_RIGHT_NODE := "/sys/android_touch/gesture_swipe_right"
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
