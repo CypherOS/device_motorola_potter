@@ -24,4 +24,12 @@
         <item>/sys/class/power_supply/battery/charge_rate</item>
     </string-array>
 
+	<!-- Keycodes of gestures. If the gesture is not supported set it to 0. -->
+    <integer name="config_oneFingerSwipeLeftKeyCode">623</integer>
+    <integer name="config_oneFingerSwipeDownKeyCode">624</integer>
+    <integer name="config_oneFingerSwipeRightKeyCode">622</integer>
+    <integer name="config_oneFingerSwipeUpKeyCode">625</integer>
+     <!-- Whether to intercept inputs on screen off. -->
+    <bool name="config_enableKeyHandler">true</bool>
+
 </resources>
